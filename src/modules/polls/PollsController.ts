@@ -16,6 +16,7 @@ class PollController {
   @CatchError
   static async getPolls(event: APIGatewayEvent, context: Context) {
     const { items } = await PollService.getAllPolls()
+    console.log(items);
     return APIResponse.success({ polls: items });
   }
 
