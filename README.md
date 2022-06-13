@@ -34,7 +34,7 @@
 
 Install all dependencies.
 ```
-npm run install
+npm install
 ```
 
 Deploy on AWS
