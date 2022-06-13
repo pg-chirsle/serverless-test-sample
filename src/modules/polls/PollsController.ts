@@ -9,15 +9,14 @@ import { ICreatePoll } from "./PollsTypes";
 class PollController {
   @CatchError
   static async createPoll(event: APIGatewayEvent, context: Context, body: ICreatePoll) {
-    const poll = await PollService.createPoll(body.name);
+    const poll = await PollService.createPoll({ name: body.name });
     return APIResponse.success({ poll });
   }
 
   @CatchError
   static async getPolls(event: APIGatewayEvent, context: Context) {
-    const { items } = await PollService.getAllPolls()
-    console.log(items);
-    return APIResponse.success({ polls: items });
+    const polls = await PollService.getAllPolls()
+    return APIResponse.success({ polls });
   }
 
   @CatchError
@@ -33,9 +32,8 @@ class PollController {
   @CatchError
   static async updatePoll(event: APIGatewayEvent, context: Context, body: ICreatePoll) {
     const id = event.pathParameters?.id as string;
-    const { name } = body;
-    const result = await PollService.updatePoll(id, name)
-    return APIResponse.success({ poll: result });
+    const pollId = await PollService.updatePoll({ id, ...body })
+    return APIResponse.success({ id: pollId });
   }
 
   @CatchError
