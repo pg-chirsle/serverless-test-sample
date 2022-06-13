@@ -1,4 +1,4 @@
-# Serverless Rest API with Typescript, Webpack and MongoDB
+# Serverless Rest API with Typescript, Webpack and DynamoDB
 
 ## Project structure
 
