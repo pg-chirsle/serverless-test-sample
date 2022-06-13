@@ -1,5 +1,5 @@
-org: pgchrisle
-# app: aws-node-http-api
+org: leeminhung
+app: aws-node-http-api
 service: aws-node-http-api
 
 plugins:
