@@ -1,0 +1,39 @@
+createPoll:
+  handler: src/modules/polls/PollsHandler.createPoll
+  events:
+    - http:
+        method: post
+        path: polls
+        cors: true
+
+getPolls:
+  handler: src/modules/polls/PollsHandler.getPolls
+  events:
+    - http:
+        method: get
+        path: polls
+        cors: true
+
+getPoll:
+  handler: src/modules/polls/PollsHandler.getPoll
+  events:
+    - http:
+        method: get
+        path: polls/{id}
+        cors: true
+
+updatePoll:
+  handler: src/modules/polls/PollsHandler.updatePoll
+  events:
+    - http:
+        method: put
+        path: polls/{id}
+        cors: true
+
+detelePoll:
+  handler: src/modules/polls/PollsHandler.deletePoll
+  events:
+    - http:
+        method: delete
+        path: polls/{id}
+        cors: true
