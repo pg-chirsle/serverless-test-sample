@@ -48,13 +48,13 @@ class PollService {
     return poll.id;
   }
 
-  static async deletePoll(id: string) {
+  static async deletePoll(id: string): Promise<string> {
     const result = await this.dbClient.delete({
       TableName: this.tablename,
       Key: { id }
     }).promise();
 
-    return result;
+    return id;
   }
 }
 
