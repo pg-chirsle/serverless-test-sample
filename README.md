@@ -45,3 +45,7 @@ GET - https://ucnyqr234h.execute-api.us-east-1.amazonaws.com/dev/polls/{id}
 PUT - https://ucnyqr234h.execute-api.us-east-1.amazonaws.com/dev/polls/{id}
 DELETE - https://ucnyqr234h.execute-api.us-east-1.amazonaws.com/dev/polls/{id}
 ```
+
+## CI/CD
+
+![ci/cd image](https://github.com/pg-chirsle/serverless-test-sample/blob/main/statics/cicdresult.png)
