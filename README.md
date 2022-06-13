@@ -48,4 +48,4 @@ DELETE - https://ucnyqr234h.execute-api.us-east-1.amazonaws.com/dev/polls/{id}
 
 ## CI/CD
 
-[alt text](https://github.com/pg-chirsle/serverless-test-sample/blob/main/statics/cicdresult.png?raw=true)
+![ci/cd image](https://github.com/pg-chirsle/serverless-test-sample/blob/main/statics/cicdresult.png)
